@@ -9,5 +9,5 @@ Layers = [
     layer_get_id("PURPLE"),
     layer_get_id("ORANGE"),
     layer_get_id("TURQUOISE"),
-    layer_get_id("DARK_GRAY")
+    layer_get_id("BLACK")
 ];

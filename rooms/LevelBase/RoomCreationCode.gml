@@ -9,7 +9,7 @@ var Layers = [
     layer_get_id("PURPLE"),
     layer_get_id("ORANGE"),
     layer_get_id("TURQUOISE"),
-    layer_get_id("DARK_GRAY")
+    layer_get_id("BLACK")
 ];
 
 if (global.CurrentColor< 0 || global.CurrentColor >= array_length(global.Colors)) return;

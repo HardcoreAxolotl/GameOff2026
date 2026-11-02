@@ -6,8 +6,8 @@
   "name":"CheckPoint",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"IDK",
+    "path":"folders/Objects/IDK.yy",
   },
   "parentObjectId":null,
   "persistent":true,
@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sColorOrb",
-    "path":"sprites/sColorOrb/sColorOrb.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":false,
 }

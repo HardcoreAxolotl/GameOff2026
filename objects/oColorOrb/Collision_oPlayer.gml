@@ -12,4 +12,4 @@ function set_color() {
     global.CurrentColor = ColorID;
 }
 
-if (visible) set_color();
+if (global.CurrentColor != ColorID) set_color();

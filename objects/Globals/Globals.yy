@@ -8,8 +8,8 @@
   "name":"Globals",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"IDK",
+    "path":"folders/Objects/IDK.yy",
   },
   "parentObjectId":null,
   "persistent":false,

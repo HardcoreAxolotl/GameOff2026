@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ResetLevel",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ResetLevel",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

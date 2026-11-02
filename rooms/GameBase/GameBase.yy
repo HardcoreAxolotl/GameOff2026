@@ -10,8 +10,8 @@
   "layers":[],
   "name":"GameBase",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Templates",
+    "path":"folders/Rooms/Templates.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
