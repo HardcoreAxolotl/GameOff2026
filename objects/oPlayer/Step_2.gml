@@ -9,7 +9,7 @@ if (place_meeting(x + hspd, y, COLLISION[global.CurrentColor])) {
 
     hspd = 0;
 } else {
-    x += hspd;
+    if (!softlock) x += hspd;
 }
 
 // ==============================
@@ -23,5 +23,11 @@ if (place_meeting(x, y + vspd, COLLISION[global.CurrentColor])) {
 
     vspd = 0;
 } else {
-    y += vspd;
+    if (!softlock) y += vspd;
+}
+
+if (place_meeting(x, y, COLLISION[global.CurrentColor]) && softlocked) {
+    alarm[10] = 60;
+    softlock = true;
+    softlocked = false;
 }

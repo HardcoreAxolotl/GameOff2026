@@ -1,0 +1,1 @@
+instance_destroy(); //this will destroy the particle after the set time so they don't drift on forever

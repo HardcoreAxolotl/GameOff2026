@@ -3,6 +3,8 @@ if (state) {
     
     // Change room
     if (timer >= duration) {
+        if (reset) ResetLevel();
+            
         room_goto(targetRoom);
         
         state =  false;

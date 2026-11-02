@@ -10,10 +10,10 @@ hspd = move * walkspd;
 vspd += grv;
 
 if (is_grounded) {
-	if (key_start_jump) vspd = jfr;
+    if (key_start_jump) vspd = jfr;
 }
 
- if (key_stop_jump && vspd<0) {
+if (key_stop_jump && vspd<0) {
     vspd *= 0.3;
 } 
 

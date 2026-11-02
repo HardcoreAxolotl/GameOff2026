@@ -12,6 +12,9 @@ COLLISION = [
     layer_tilemap_get_id(layer_get_id("BLACK"))
 ];
 
+softlocked = true;
+softlock = false;
+
 hspd = 0;
 vspd = 0;
 walkspd = 2.5;
@@ -21,6 +24,8 @@ jfr = -4;
 is_grounded = false;
 
 global.health = 3;
+
+visible = true;
 
 if (instance_exists(CheckPoint)) {
     var _inst = instance_find(CheckPoint, 0);
