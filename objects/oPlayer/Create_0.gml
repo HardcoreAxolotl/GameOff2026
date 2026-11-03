@@ -17,9 +17,9 @@ softlock = false;
 
 hspd = 0;
 vspd = 0;
-walkspd = 2.5;
-grv = 0.15;
-jfr = -4;
+walkspd = 1.5;
+grv = 0.1;
+jfr = -2.25;
 
 is_grounded = false;
 

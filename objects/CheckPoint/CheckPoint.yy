@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"CheckPoint",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"CheckPoint",
   "overriddenProperties":[],
@@ -27,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sColorOrb",
+    "path":"sprites/sColorOrb/sColorOrb.yy",
+  },
   "spriteMaskId":null,
   "visible":false,
 }
