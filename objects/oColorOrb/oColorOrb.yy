@@ -3,15 +3,14 @@
   "%Name":"oColorOrb",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oColorOrb",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Level",
+    "path":"folders/Objects/Level.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,7 +27,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"ColorID","filters":[],"listItems":[],"multiselect":false,"name":"ColorID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varDescription":"WHITE: 0\r\nRED: 1\r\nYELLOW: 2\r\nGREEN: 3\r\nCYAN: 4\r\nBLUE: 5\r\nMAGENTA: 6\r\nPURPLE: 7\r\nORANGE: 8\r\nTURQUOISE: 9\r\nBLACK: 10","varFriendlyName":"Color ID","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"ColorID","filters":[],"listItems":[],"multiselect":false,"name":"ColorID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varDescription":"WHITE: 0\r\nRED: 1\r\nYELLOW: 2\r\nGREEN: 3\r\nCYAN: 4\r\nBLUE: 5\r\nPURPLE: 6\r\nBLACK: 7","varFriendlyName":"Color ID","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

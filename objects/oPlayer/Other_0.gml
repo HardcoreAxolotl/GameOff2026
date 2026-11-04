@@ -1,2 +1,1 @@
-fade_to_room(room, 60, c_black);
-softlock = true;
+if (x < 0) x = room_width + (room_width + x);

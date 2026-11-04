@@ -8,8 +8,8 @@
   "name":"CheckPoint",
   "overriddenProperties":[],
   "parent":{
-    "name":"IDK",
-    "path":"folders/Objects/IDK.yy",
+    "name":"Player",
+    "path":"folders/Objects/Player.yy",
   },
   "parentObjectId":null,
   "persistent":true,

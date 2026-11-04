@@ -11,6 +11,7 @@ COLLISION = [
     layer_tilemap_get_id(layer_get_id("TURQUOISE")),
     layer_tilemap_get_id(layer_get_id("BLACK"))
 ];
+groundPlatform = noone;
 
 softlocked = true;
 softlock = false;

@@ -8,8 +8,8 @@
   "name":"oPlatformPoints",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"MovingPlatforms",
+    "path":"folders/Objects/Level/MovingPlatforms.yy",
   },
   "parentObjectId":null,
   "persistent":false,

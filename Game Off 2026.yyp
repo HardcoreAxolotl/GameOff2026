@@ -59,6 +59,9 @@
     {"$GMFolder":"","%Name":"Virtual Buttons","folderPath":"folders/Input/Virtual Buttons.yy","name":"Virtual Buttons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"IDK","folderPath":"folders/Objects/IDK.yy","name":"IDK","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Level","folderPath":"folders/Objects/Level.yy","name":"Level","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"MovingPlatforms","folderPath":"folders/Objects/Level/MovingPlatforms.yy","name":"MovingPlatforms","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Player","folderPath":"folders/Objects/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particles","folderPath":"folders/Particles.yy","name":"Particles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Level 0-9","folderPath":"folders/Rooms/Level 0-9.yy","name":"Level 0-9","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -72,6 +75,7 @@
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.gm_filter_underwater-1.0.0","name":"io.gamemaker.gm_filter_underwater-1.0.0","path":"io.gamemaker.gm_filter_underwater-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_effect_glow-1.0.0","name":"io.gamemaker.gm_effect_glow-1.0.0","path":"io.gamemaker.gm_effect_glow-1.0.0.yyp",},
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"gamecontrollerdb.txt","CopyToMask":-1,"filePath":"datafiles","name":"gamecontrollerdb.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -80,7 +84,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2026.100.0.1195",
   },
   "name":"Game Off 2026",
   "resources":[
@@ -89,6 +93,8 @@
     {"id":{"name":"CheckPoint","path":"objects/CheckPoint/CheckPoint.yy",},},
     {"id":{"name":"Fade","path":"objects/Fade/Fade.yy",},},
     {"id":{"name":"Globals","path":"objects/Globals/Globals.yy",},},
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
+    {"id":{"name":"oCollision","path":"objects/oCollision/oCollision.yy",},},
     {"id":{"name":"oColorOrb","path":"objects/oColorOrb/oColorOrb.yy",},},
     {"id":{"name":"oMovingPlatform","path":"objects/oMovingPlatform/oMovingPlatform.yy",},},
     {"id":{"name":"oPlatformPoints","path":"objects/oPlatformPoints/oPlatformPoints.yy",},},
@@ -106,10 +112,8 @@
     {"id":{"name":"Level_7","path":"rooms/Level_7/Level_7.yy",},},
     {"id":{"name":"Level_8","path":"rooms/Level_8/Level_8.yy",},},
     {"id":{"name":"Level_9","path":"rooms/Level_9/Level_9.yy",},},
-    {"id":{"name":"Level_test","path":"rooms/Level_test/Level_test.yy",},},
     {"id":{"name":"Level","path":"rooms/Level/Level.yy",},},
     {"id":{"name":"LevelBase","path":"rooms/LevelBase/LevelBase.yy",},},
-    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"__InputBindingIsThumbstick","path":"scripts/__InputBindingIsThumbstick/__InputBindingIsThumbstick.yy",},},
     {"id":{"name":"__InputBindingScan","path":"scripts/__InputBindingScan/__InputBindingScan.yy",},},
     {"id":{"name":"__InputClassCluster","path":"scripts/__InputClassCluster/__InputClassCluster.yy",},},
@@ -424,6 +428,7 @@
     {"id":{"name":"InputY","path":"scripts/InputY/InputY.yy",},},
     {"id":{"name":"ResetLevel","path":"scripts/ResetLevel/ResetLevel.yy",},},
     {"id":{"name":"sBG","path":"sprites/sBG/sBG.yy",},},
+    {"id":{"name":"sCollision","path":"sprites/sCollision/sCollision.yy",},},
     {"id":{"name":"sColorOrb","path":"sprites/sColorOrb/sColorOrb.yy",},},
     {"id":{"name":"sColors","path":"sprites/sColors/sColors.yy",},},
     {"id":{"name":"sPlayerCollision","path":"sprites/sPlayerCollision/sPlayerCollision.yy",},},
@@ -441,8 +446,10 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Initalize","path":"rooms/Initalize/Initalize.yy",},},
+    {"roomId":{"name":"LevelBase","path":"rooms/LevelBase/LevelBase.yy",},},
+    {"roomId":{"name":"Level","path":"rooms/Level/Level.yy",},},
     {"children":[
-        {"roomId":{"name":"Level_test","path":"rooms/Level_test/Level_test.yy",},},
+        {"roomId":{"name":"Level_0","path":"rooms/Level_0/Level_0.yy",},},
         {"roomId":{"name":"Level_1","path":"rooms/Level_1/Level_1.yy",},},
         {"roomId":{"name":"Level_2","path":"rooms/Level_2/Level_2.yy",},},
         {"roomId":{"name":"Level_3","path":"rooms/Level_3/Level_3.yy",},},
@@ -453,10 +460,7 @@
         {"roomId":{"name":"Level_8","path":"rooms/Level_8/Level_8.yy",},},
         {"roomId":{"name":"Level_9","path":"rooms/Level_9/Level_9.yy",},},
       ],"groupName":"Levels",},
-    {"roomId":{"name":"LevelBase","path":"rooms/LevelBase/LevelBase.yy",},},
-    {"roomId":{"name":"Level","path":"rooms/Level/Level.yy",},},
     {"roomId":{"name":"GameBase","path":"rooms/GameBase/GameBase.yy",},},
-    {"roomId":{"name":"Level_0","path":"rooms/Level_0/Level_0.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[

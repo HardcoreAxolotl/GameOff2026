@@ -11,8 +11,8 @@
   "name":"oMovingPlatform",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"MovingPlatforms",
+    "path":"folders/Objects/Level/MovingPlatforms.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,7 +28,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"ColorID","filters":[],"listItems":[],"multiselect":false,"name":"ColorID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varDescription":"WHITE: 0\r\nRED: 1\r\nYELLOW: 2\r\nGREEN: 3\r\nCYAN: 4\r\nBLUE: 5\r\nPURPLE: 6\r\nBLACK: 7","varFriendlyName":"Color ID","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

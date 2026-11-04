@@ -1,32 +1,55 @@
+var collision = [COLLISION[global.CurrentColor], oMovingPlatform];
+
 // ==============================
-// Horizontal collision
+// Moving Platform displacement
 // ==============================
 
-if (place_meeting(x + hspd, y, COLLISION[global.CurrentColor])) {
-    while (!place_meeting(x + sign(hspd), y, COLLISION[global.CurrentColor])) {
-        x += sign(hspd);
-    }
+var _platformX = 0;
+var _platformY = 0;
 
-    hspd = 0;
-} else {
-    if (!softlock) x += hspd;
+if (groundPlatform != noone && instance_exists(groundPlatform)) {
+    _platformX = groundPlatform.x - groundPlatform.xprevious;
+    _platformY = groundPlatform.y - groundPlatform.yprevious;
 }
 
+var _moveX = hspd + _platformX;
+var _moveY = vspd + _platformY;
+
 // ==============================
-// Vertical collision
+// Vertical collision FIRST
 // ==============================
 
-if (place_meeting(x, y + vspd, COLLISION[global.CurrentColor])) {
-    while (!place_meeting(x, y + sign(vspd), COLLISION[global.CurrentColor])) {
-        y += sign(vspd);
+if (place_meeting(x, y + _moveY, collision)) {
+    while (_moveY != 0 && !place_meeting(x, y + sign(_moveY), collision)) {
+        y += sign(_moveY);
     }
 
     vspd = 0;
-} else {
-    if (!softlock) y += vspd;
+}
+else {
+    if (!softlock) y += _moveY;
 }
 
-if (place_meeting(x, y, COLLISION[global.CurrentColor]) && softlocked) {
+// ==============================
+// Horizontal collision SECOND
+// ==============================
+
+if (place_meeting(x + _moveX, y, collision)) {
+    while (_moveX != 0 && !place_meeting(x + sign(_moveX), y, collision)) {
+        x += sign(_moveX);
+    }
+
+    hspd = 0;
+}
+else {
+    if (!softlock) x += _moveX;
+}
+
+// ==============================
+// Softlock detection
+// ==============================
+
+if (place_meeting(x, y, collision) && softlocked) {
     alarm[10] = 60;
     softlock = true;
     softlocked = false;
