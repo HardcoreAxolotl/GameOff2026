@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ReinitGlobals",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ReinitGlobals",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,38 +1,39 @@
-COLLISION = [
-    layer_tilemap_get_id(layer_get_id("WHITE")),
-    layer_tilemap_get_id(layer_get_id("RED")),
-    layer_tilemap_get_id(layer_get_id("YELLOW")),
-    layer_tilemap_get_id(layer_get_id("GREEN")),
-    layer_tilemap_get_id(layer_get_id("CYAN")),
-    layer_tilemap_get_id(layer_get_id("BLUE")),
-    layer_tilemap_get_id(layer_get_id("MAGENTA")),
-    layer_tilemap_get_id(layer_get_id("PURPLE")),
-    layer_tilemap_get_id(layer_get_id("ORANGE")),
-    layer_tilemap_get_id(layer_get_id("TURQUOISE")),
-    layer_tilemap_get_id(layer_get_id("BLACK"))
-];
-groundPlatform = noone;
+#region constants
+grav = 0.2;
+max_jumps = 2;
+jump_force = 3.33333;
 
-softlocked = true;
-softlock = false;
+acceleration = 0.5;
+decceleration = 0.6;
+max_speed = 2;
 
-hspd = 0;
+air_control = 0.6; 
+
+#endregion
+
+#region runtime
+// movement
+hspd = 0;  
 vspd = 0;
-walkspd = 1.5;
-grv = 0.1;
-jfr = -2.25;
+move_dir = 0;
+wall_dir = 0;
+jumps = 0;
 
+// states
+is_dead = false;
 is_grounded = false;
 
-global.health = 3;
+// collision
+collision_targets = noone;
 
-visible = true;
+// colors
+color_id_cache = -1;
+#endregion
 
-if (instance_exists(CheckPoint)) {
-    var _inst = instance_find(CheckPoint, 0);
-    x = _inst.x;
-    y = _inst.y;
-}
-else {
-    instance_create_depth(0,0,0, CheckPoint);
-}
+/*
+alarm 0 is cayote time
+alarm 1 is jump buffering
+alarm 2 is dash cooldown
+alarm 3 is death animation
+alarm 11 is death after delay
+*/

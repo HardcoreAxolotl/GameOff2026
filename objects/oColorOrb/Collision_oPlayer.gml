@@ -1,15 +1,32 @@
 if (global.CurrentColor != ColorID) {
     var Layer = global.Layer;
     
-    if (ColorID< 0 || ColorID >= array_length(global.Colors)) return;
+    if (ColorID< 0 || ColorID >= array_length(COLORS)) return;
 
     var lay_id = layer_get_id("BG");
     var back_id = layer_background_get_id(lay_id);
+    
+    instance_create_layer(
+        x, y,
+        layer,
+        oColorTransition,
+        {
+            current_color: COLORS[global.CurrentColor],
+            target_color: COLORS[ColorID],
+            back_id: back_id,
+            current_layer: global.CurrentColor,
+            target_layer: ColorID
+        }
+    );
 
-    for (var i = 0; i < array_length(Layer); i++) {
-        layer_set_visible(Layer[i], i == ColorID);
-    }
-
-    layer_background_blend(back_id, global.Colors[ColorID]);
     global.CurrentColor = ColorID;
+    
+    instance_create_layer(
+        x, y,
+        layer,
+        oFade,
+        {
+            creator: id
+        }
+    );
 }

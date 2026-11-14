@@ -1,7 +1,7 @@
 if (variable_global_exists("Layer")) {
     var Layers = global.Layer;
     
-    if (global.CurrentColor< 0 || global.CurrentColor >= array_length(global.Colors)) return;
+    if (global.CurrentColor< 0 || global.CurrentColor >= array_length(COLORS)) return;
     
     var lay_id = layer_get_id("BG");
     var back_id = layer_background_get_id(lay_id);
@@ -10,6 +10,6 @@ if (variable_global_exists("Layer")) {
         layer_set_visible(Layers[i], i == global.CurrentColor);
     }
     
-    layer_background_blend(back_id, global.Colors[global.CurrentColor]);
+    layer_background_blend(back_id, COLORS[global.CurrentColor]);
     global.CurrentColor = global.CurrentColor;
 }

@@ -1,33 +1,53 @@
-var key_left = InputCheck(INPUT_VERB.LEFT);
-var key_right = InputCheck(INPUT_VERB.RIGHT);
-var key_start_jump = InputPressed(INPUT_VERB.ACCEPT);
-var key_stop_jump = InputReleased(INPUT_VERB.ACCEPT);
+var key_left        = InputCheck(INPUT_VERB.LEFT);
+var key_right       = InputCheck(INPUT_VERB.RIGHT);
+var key_down       = InputCheck(INPUT_VERB.DOWN);
+var key_start_jump  = InputPressed(INPUT_VERB.ACCEPT);
+var key_stop_jump   = InputReleased(INPUT_VERB.ACCEPT);
+var key_dash        = InputPressed(INPUT_VERB.SPECIAL);
 
-var collision = [COLLISION[global.CurrentColor], oMovingPlatform];
+if (is_dead) exit;
 
-// Identify the platform beneath the player
-groundPlatform = instance_place(x, y + 1, oMovingPlatform);
+move_dir = key_right - key_left;
 
-is_grounded = place_meeting(x, y + 1, collision);
+if (global.CurrentColor != color_id_cache) {
+    color_id_cache = global.CurrentColor;
+    collision_targets = global.TilemapCollision[color_id_cache];
+}
 
-var move = key_right - key_left;
-hspd = move * walkspd;
+is_grounded = place_meeting(x, y + 1, collision_targets);
 
-// Gravity and jumping
-if (is_grounded) {
-    if (key_start_jump) {
-        vspd = jfr;
-    }
-    else {
-        vspd = 0;
-    }
+#region movement
+
+#region move
+if (move_dir != 0) {
+    var _accel = is_grounded
+    ? acceleration
+    : acceleration * air_control;
+    
+    hspd +=_accel * move_dir;
 }
 else {
-    vspd += grv;
+    if (hspd != 0) hspd -= (hspd > 0) ? decceleration : -decceleration;
 }
 
-if (key_stop_jump && vspd < 0) {
-    vspd *= 0.3;
+hspd = clamp(hspd, -max_speed, max_speed)
+#endregion
+
+#region jump
+if (is_grounded) {
+    jumps = 0;
 }
 
-if (move != 0) image_xscale = move;
+vspd += grav;
+
+if (key_start_jump && jumps < max_jumps) {
+    vspd = 0;
+    vspd -= jump_force;
+    jumps++;
+}
+if (key_stop_jump) {
+    vspd *= 0.6;
+}
+#endregion
+
+#endregion

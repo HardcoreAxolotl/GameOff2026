@@ -1,56 +1,34 @@
-var collision = [COLLISION[global.CurrentColor], oMovingPlatform];
-
 // ==============================
-// Moving Platform displacement
+// Vertical collision
 // ==============================
+if (vspd != 0) {
+    var _steps = ceil(abs(vspd));
+    var _dir = sign(vspd);
 
-var _platformX = 0;
-var _platformY = 0;
+    repeat (_steps) {
+        if (place_meeting(x, y + _dir, collision_targets)) {
+            vspd = 0;
+            break;
+        }
 
-if (groundPlatform != noone && instance_exists(groundPlatform)) {
-    _platformX = groundPlatform.x - groundPlatform.xprevious;
-    _platformY = groundPlatform.y - groundPlatform.yprevious;
-}
-
-var _moveX = hspd + _platformX;
-var _moveY = vspd + _platformY;
-
-// ==============================
-// Vertical collision FIRST
-// ==============================
-
-if (place_meeting(x, y + _moveY, collision)) {
-    while (_moveY != 0 && !place_meeting(x, y + sign(_moveY), collision)) {
-        y += sign(_moveY);
+        y += _dir;
     }
-
-    vspd = 0;
-}
-else {
-    if (!softlock) y += _moveY;
 }
 
 // ==============================
-// Horizontal collision SECOND
+// Horizontal collision
 // ==============================
+if (hspd != 0) {
+    var _steps = floor(abs(hspd));
+    var _dir = sign(hspd);
 
-if (place_meeting(x + _moveX, y, collision)) {
-    while (_moveX != 0 && !place_meeting(x + sign(_moveX), y, collision)) {
-        x += sign(_moveX);
+    repeat (_steps) {
+        if (place_meeting(x + _dir, y, collision_targets)) {
+            hspd = 0;
+            dash_timer = 0;     // stop the dash when we hit a wall
+            break;
+        }
+
+        x += _dir;
     }
-
-    hspd = 0;
-}
-else {
-    if (!softlock) x += _moveX;
-}
-
-// ==============================
-// Softlock detection
-// ==============================
-
-if (place_meeting(x, y, collision) && softlocked) {
-    alarm[10] = 60;
-    softlock = true;
-    softlocked = false;
 }

@@ -1,1 +1,0 @@
-if (global.CurrentColor != ColorID) draw_self();

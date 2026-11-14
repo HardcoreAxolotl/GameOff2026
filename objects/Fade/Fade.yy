@@ -10,8 +10,8 @@
   "name":"Fade",
   "overriddenProperties":[],
   "parent":{
-    "name":"IDK",
-    "path":"folders/Objects/IDK.yy",
+    "name":"Fade types",
+    "path":"folders/Objects/IDK/Fade types.yy",
   },
   "parentObjectId":null,
   "persistent":true,
