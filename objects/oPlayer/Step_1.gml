@@ -40,11 +40,17 @@ if (is_grounded) {
 
 vspd += grav;
 
-if (key_start_jump && jumps < max_jumps) {
+if (key_start_jump) {
+    alarm[1] = 10;
+}
+
+if (alarm[1] >= 0 && jumps < max_jumps) {
     vspd = 0;
     vspd -= jump_force;
     jumps++;
+    alarm[1] = -1;
 }
+
 if (key_stop_jump) {
     vspd *= 0.6;
 }

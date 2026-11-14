@@ -1,6 +1,6 @@
 #region constants
 grav = 0.2;
-max_jumps = 2;
+max_jumps = 1;
 jump_force = 3.33333;
 
 acceleration = 0.5;
@@ -22,6 +22,7 @@ jumps = 0;
 // states
 is_dead = false;
 is_grounded = false;
+is_dashing = false;
 
 // collision
 collision_targets = noone;

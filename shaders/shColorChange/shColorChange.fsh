@@ -7,19 +7,10 @@ void main()
 {
     vec4 tex = texture2D(gm_BaseTexture, v_vTexcoord);
 
-    if (abs(tex.r - tex.g) < 0.001 &&
-        abs(tex.g - tex.b) < 0.001)
+    if (!(tex.r == tex.g && tex.g == tex.b))
     {
-        gl_FragColor = vec4(
-            u_Color * tex.rgb,
-            tex.a * v_vColour.a
-        );
+        tex.rgb *= u_Color;
     }
-    else
-    {
-        gl_FragColor = vec4(
-            tex.rgb * v_vColour.rgb,
-            tex.a * v_vColour.a
-        );
-    }
+
+    gl_FragColor = tex * v_vColour;
 }
