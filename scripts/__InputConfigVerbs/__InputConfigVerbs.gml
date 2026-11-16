@@ -2,7 +2,6 @@ function __InputConfigVerbs()
 {
     enum INPUT_VERB
     {
-        //Add your own verbs here!
         UP,
         DOWN,
         LEFT,
@@ -10,7 +9,7 @@ function __InputConfigVerbs()
         ACCEPT,
         CANCEL,
         ACTION,
-        SPECIAL,
+        ABILITY,
         PAUSE,
         MAP,
     }
@@ -22,12 +21,12 @@ function __InputConfigVerbs()
         NAVIGATION,
     }
     
-    InputDefineVerb(INPUT_VERB.UP,      "up",         [vk_up,    "W"],    [-gp_axislv, gp_padu]);
-    InputDefineVerb(INPUT_VERB.DOWN,    "down",       [vk_down,  "S"],    [ gp_axislv, gp_padd]);
-    InputDefineVerb(INPUT_VERB.LEFT,    "left",       [vk_left,  "A"],    [-gp_axislh, gp_padl]);
-    InputDefineVerb(INPUT_VERB.RIGHT,   "right",      [vk_right, "D"],    [ gp_axislh, gp_padr]);
-    InputDefineVerb(INPUT_VERB.ACTION,  "action",      vk_enter,            gp_face3);
-    InputDefineVerb(INPUT_VERB.SPECIAL, "special",     vk_shift,            gp_face4);
+    InputDefineVerb(INPUT_VERB.UP,    "up",    [vk_up,    "W"],          [-gp_axislv, gp_padu]);
+    InputDefineVerb(INPUT_VERB.DOWN,  "down",  [vk_down,  "S"],          [ gp_axislv, gp_padd]);
+    InputDefineVerb(INPUT_VERB.LEFT,  "left",  [vk_left,  "A"],         [-gp_axislh, gp_padl]);
+    InputDefineVerb(INPUT_VERB.RIGHT, "right", [vk_right, "D"],         [ gp_axislh, gp_padr]);
+    InputDefineVerb(INPUT_VERB.ACTION,  "action",      vk_space,            gp_face3);
+    InputDefineVerb(INPUT_VERB.ABILITY, "ability",     vk_shift,            gp_face2);
     
     if (INPUT_ON_SWITCH_X)
     {

@@ -9,7 +9,10 @@
     "name":"Orgs",
     "path":"folders/Objects/Level/Orgs.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oOrb",
+    "path":"objects/oOrb/oOrb.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

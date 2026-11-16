@@ -38,7 +38,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"starting_ability","filters":[],"listItems":[],"multiselect":false,"name":"starting_ability","rangeEnabled":false,"rangeMax":4.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varDescription":"NONE = 0\r\nDOUBLE_JUMP = 1\r\nWALL_JUMP = 2\r\nGRAVITY_SWAP = 3\r\nDASH = 4","varFriendlyName":"Starting Ability","varType":1,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

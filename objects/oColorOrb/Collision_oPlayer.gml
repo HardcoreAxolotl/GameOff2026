@@ -6,18 +6,34 @@ if (global.CurrentColor != ColorID) {
     var lay_id = layer_get_id("BG");
     var back_id = layer_background_get_id(lay_id);
     
-    instance_create_layer(
-        x, y,
-        layer,
-        oColorTransition,
-        {
-            current_color: COLORS[global.CurrentColor],
-            target_color: COLORS[ColorID],
-            back_id: back_id,
-            current_layer: global.CurrentColor,
-            target_layer: ColorID
-        }
+    if (global.TransitionForHaters) {
+        instance_create_layer(
+            x, y,
+            layer,
+            oColorTransitionDisabled,
+            {
+                current_color: COLORS[global.CurrentColor],
+                target_color: COLORS[ColorID],
+                back_id: back_id,
+                current_layer: global.CurrentColor,
+                target_layer: ColorID
+            }
     );
+    }
+    else {
+        instance_create_layer(
+            x, y,
+            layer,
+            oColorTransition,
+            {
+                current_color: COLORS[global.CurrentColor],
+                target_color: COLORS[ColorID],
+                back_id: back_id,
+                current_layer: global.CurrentColor,
+                target_layer: ColorID
+            }
+    );
+    }
 
     global.CurrentColor = ColorID;
     

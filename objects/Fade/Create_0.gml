@@ -2,6 +2,7 @@
 duration = 60;
 targetRoom = room;
 color = c_white;
+above_gui = false;
 
 // Vars
 timer = 0;

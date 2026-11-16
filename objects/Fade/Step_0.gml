@@ -1,9 +1,9 @@
 if (state) {
-    timer++;
+    if (!global.GamePaused || above_gui) timer++;
     
     // Change room
     if (timer >= duration) {
-        if (reset) ResetLevel();
+        if (reset) ResetLevel(); // Generally wanted for moving between levels 
             
         room_goto(targetRoom);
         

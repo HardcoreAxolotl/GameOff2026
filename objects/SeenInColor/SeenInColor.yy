@@ -9,8 +9,8 @@
   "name":"SeenInColor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Change color",
-    "path":"folders/Objects/IDK/Change color.yy",
+    "name":"Look",
+    "path":"folders/Objects/IDK/Look.yy",
   },
   "parentObjectId":{
     "name":"ChangeColor",

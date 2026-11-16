@@ -1,3 +1,17 @@
+if (global.GamePaused || is_dead) {
+    image_speed = 0;
+}
+else {
+    image_speed = 1;
+}
+
+if (is_gravity_swapped) {
+    image_yscale = -1;
+}
+else {
+    image_yscale = 1;
+}
+
 if (move_dir != 0) { 
         image_xscale = move_dir;
 }

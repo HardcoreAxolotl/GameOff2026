@@ -1,7 +1,7 @@
 // @description 
 // Get GUI dimensions
-var _guiW = display_get_gui_width();
-var _guiH = display_get_gui_height();
+var _guiW = display_get_width();
+var _guiH = display_get_height();
 
 // Draw fade
 draw_set_alpha(alpha);

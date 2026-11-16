@@ -46,7 +46,17 @@ function InitGlobals() {
         layer_script_begin(global.Layer[i], _begin);
         layer_script_end(global.Layer[i], _end);
     }
+    
+    // Settings
+    global.TransitionForHaters = false;
+    global.IHateTheCoolBG = false;
+    global.SFX = true;
+    global.Music = true;
 
+    // Game state
+    global.GameStarted = false;
+    global.GamePaused = false;
+    
     global.CurrentColor = 0;
     global.PrivousColor = 0;
 }

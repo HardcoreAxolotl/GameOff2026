@@ -11,8 +11,8 @@
   "name":"oButton",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Buttons",
+    "path":"folders/Objects/UI/Buttons.yy",
   },
   "parentObjectId":{
     "name":"ChangeColor",

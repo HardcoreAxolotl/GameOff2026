@@ -9,6 +9,14 @@ max_speed = 2;
 
 air_control = 0.6; 
 
+enum ABILITIES {
+    NONE = 0,
+    DOUBLE_JUMP = 1,
+    WALL_JUMP = 2,
+    GRAVITY_SWAP = 3,
+    DASH = 4
+}
+
 #endregion
 
 #region runtime
@@ -23,12 +31,19 @@ jumps = 0;
 is_dead = false;
 is_grounded = false;
 is_dashing = false;
+is_walled = false;
+is_gravity_swapped = false;
+
+// conditionals
+can_dash = false;
+can_swap_gravity = false;
 
 // collision
-collision_targets = noone;
+collision = noone;
 
-// colors
+// other
 color_id_cache = -1;
+active_ability = starting_ability;
 #endregion
 
 /*

@@ -1,20 +1,40 @@
+if (is_dead || global.GamePaused) exit;
+    
 var key_left        = InputCheck(INPUT_VERB.LEFT);
 var key_right       = InputCheck(INPUT_VERB.RIGHT);
 var key_down       = InputCheck(INPUT_VERB.DOWN);
 var key_start_jump  = InputPressed(INPUT_VERB.ACCEPT);
 var key_stop_jump   = InputReleased(INPUT_VERB.ACCEPT);
-var key_dash        = InputPressed(INPUT_VERB.SPECIAL);
-
-if (is_dead) exit;
+var key_ability        = InputPressed(INPUT_VERB.ABILITY);
 
 move_dir = key_right - key_left;
 
 if (global.CurrentColor != color_id_cache) {
     color_id_cache = global.CurrentColor;
-    collision_targets = global.TilemapCollision[color_id_cache];
+    collision = global.TilemapCollision[color_id_cache];
 }
 
-is_grounded = place_meeting(x, y + 1, collision_targets);
+if (is_gravity_swapped)  is_grounded = place_meeting(x, y - 1, collision);
+else is_grounded = place_meeting(x, y + 1, collision);
+
+
+var mc = place_meeting(x-1, y, collision) || place_meeting(x+1, y, collision);
+is_walled = mc;
+
+max_jumps = (active_ability == ABILITIES.DOUBLE_JUMP) ? 2 : 1;
+
+if (key_ability) {
+    switch (active_ability) {
+        case ABILITIES.GRAVITY_SWAP:
+            if (can_swap_gravity) is_gravity_swapped = !is_gravity_swapped;
+            can_swap_gravity = false;
+        break;
+    
+        case ABILITIES.DASH:
+            // TODO: Add dash ability
+        break;
+    }
+}
 
 #region movement
 
@@ -36,17 +56,21 @@ hspd = clamp(hspd, -max_speed, max_speed)
 #region jump
 if (is_grounded) {
     jumps = 0;
+    can_swap_gravity = true;
 }
 
-vspd += grav;
+if (is_gravity_swapped) vspd -= grav;
+else vspd += grav;
 
 if (key_start_jump) {
     alarm[1] = 10;
 }
 
 if (alarm[1] >= 0 && jumps < max_jumps) {
+    if (max_jumps < 2 && !is_grounded) exit;
     vspd = 0;
-    vspd -= jump_force;
+    if (is_gravity_swapped) vspd += jump_force;
+    else vspd -= jump_force;
     jumps++;
     alarm[1] = -1;
 }
