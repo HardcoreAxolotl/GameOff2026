@@ -56,7 +56,14 @@ function InitGlobals() {
     // Game state
     global.GameStarted = false;
     global.GamePaused = false;
+    global.GameSettings = false;
     
+    // UI
+    global.ButtonSelection = 0;
+    global.ButtonCount = 3;
+    global.CurrentUI = 0;
+    
+    // Color
     global.CurrentColor = 0;
     global.PrivousColor = 0;
 }

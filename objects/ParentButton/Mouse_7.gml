@@ -1,0 +1,1 @@
+if (in_button) event_user(0);

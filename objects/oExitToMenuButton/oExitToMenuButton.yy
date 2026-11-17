@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"oExitToMenuButton",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oExitToMenuButton",
@@ -12,8 +12,8 @@
     "path":"folders/Objects/UI/Buttons.yy",
   },
   "parentObjectId":{
-    "name":"oButton",
-    "path":"objects/oButton/oButton.yy",
+    "name":"ParentButton",
+    "path":"objects/ParentButton/ParentButton.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

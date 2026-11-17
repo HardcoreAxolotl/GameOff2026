@@ -10,8 +10,8 @@
     "path":"folders/Objects/UI/Slider.yy",
   },
   "parentObjectId":{
-    "name":"oButton",
-    "path":"objects/oButton/oButton.yy",
+    "name":"ParentButton",
+    "path":"objects/ParentButton/ParentButton.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

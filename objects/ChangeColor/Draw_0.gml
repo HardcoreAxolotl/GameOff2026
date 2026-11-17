@@ -11,4 +11,5 @@ shader_set_uniform_f(
 );
 
 draw_self();
+
 shader_reset();

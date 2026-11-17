@@ -3,9 +3,9 @@ if (is_dead || global.GamePaused) exit;
 var key_left        = InputCheck(INPUT_VERB.LEFT);
 var key_right       = InputCheck(INPUT_VERB.RIGHT);
 var key_down       = InputCheck(INPUT_VERB.DOWN);
-var key_start_jump  = InputPressed(INPUT_VERB.ACCEPT);
-var key_stop_jump   = InputReleased(INPUT_VERB.ACCEPT);
-var key_ability        = InputPressed(INPUT_VERB.ABILITY);
+var key_start_jump  = InputPressed(INPUT_VERB.PRIMARY);
+var key_stop_jump   = InputReleased(INPUT_VERB.PRIMARY);
+var key_ability        = InputPressed(INPUT_VERB.SECONDARY);
 
 move_dir = key_right - key_left;
 
