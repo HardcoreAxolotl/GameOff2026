@@ -11,7 +11,7 @@ if (global.IHateTheCoolBG) {
     layer_set_fx("BG", _fx);
 }
 
-if (global.NewLevel) {
-    ReinitGlobals();
-    global.NewLevel = false;
-}
+var _reset_state = (room != global.LastInitRoom) || global.NewLevel;
+ReinitGlobals(_reset_state);
+global.LastInitRoom = room;
+global.NewLevel = false;

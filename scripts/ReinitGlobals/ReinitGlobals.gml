@@ -1,5 +1,11 @@
-function ReinitGlobals() {
-    show_debug_message("ReinitGlobals script was executed - room: " + room_get_name(room));
+function ReinitGlobals(_reset_state = true) {
+    show_debug_message("ReinitGlobals script was executed - room: " + room_get_name(room) + " - reset state: " + string(_reset_state));
+
+    if (_reset_state) {
+        global.CurrentColor = 0;
+        global.PrivousColor = 0;
+    }
+
     global.Layer = [
         layer_get_id("WHITE"),
         layer_get_id("RED"),
@@ -26,7 +32,7 @@ function ReinitGlobals() {
         // Reinitialize tilemap and visibility
         global.TilemapCollision[i] = layer_tilemap_get_id(_layer);
 
-        layer_set_visible(_layer, i == 0);
+        layer_set_visible(_layer, i == global.CurrentColor);
 
         // Register shader callbacks
         var _context = { index: i };
@@ -52,6 +58,11 @@ function ReinitGlobals() {
         layer_script_end(_layer, _end);
     }
 
-    global.CurrentColor = 0;
-    global.PrivousColor = 0;
+    // A room rebuild restores the saved layer visibility and background tint,
+    // so re-apply the color the player actually has right now.
+    var _bg_layer = layer_get_id("BG");
+    if (_bg_layer != -1) {
+        var _bg = layer_background_get_id(_bg_layer);
+        if (_bg != -1) layer_background_blend(_bg, COLORS[global.CurrentColor]);
+    }
 }

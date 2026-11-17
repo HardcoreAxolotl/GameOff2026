@@ -58,6 +58,7 @@ function InitGlobals() {
     global.GamePaused = false;
     global.GameSettings = false;
     global.NewLevel = false;
+    global.LastInitRoom = noone;
     
     // UI
     global.ButtonSelection = 0;
