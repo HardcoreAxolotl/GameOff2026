@@ -9,9 +9,9 @@ var key_ability        = InputPressed(INPUT_VERB.SECONDARY);
 
 move_dir = key_right - key_left;
 
-if (global.CurrentColor != color_id_cache) {
-    color_id_cache = global.CurrentColor;
-    collision = global.TilemapCollision[color_id_cache];
+if (global.CurrentColor != current_color) {
+    current_color = global.CurrentColor;
+    collision = global.TilemapCollision[current_color];
 }
 
 if (is_gravity_swapped)  is_grounded = place_meeting(x, y - 1, collision);

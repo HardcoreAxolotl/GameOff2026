@@ -42,9 +42,17 @@ can_swap_gravity = false;
 collision = noone;
 
 // other
-color_id_cache = -1;
+current_color = -1;
 active_ability = starting_ability;
 #endregion
+
+if (instance_exists(CheckPoint)) {
+    x = CheckPoint.x;
+    y = CheckPoint.y;
+}
+else {
+    instance_create_layer(x,y,layer,CheckPoint);
+}
 
 /*
 alarm 0 is cayote time

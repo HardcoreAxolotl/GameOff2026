@@ -1,0 +1,37 @@
+{
+  "Version": "1.0",
+  "assets": [
+    {
+      "export": 2,
+      "name": "camera_rotate"
+    },
+    {
+      "export": 2,
+      "name": "color_transition"
+    },
+    {
+      "export": 2,
+      "name": "ExplodePlayer"
+    },
+    {
+      "export": 2,
+      "name": "FadeToRoom"
+    },
+    {
+      "export": 2,
+      "name": "InitGlobals"
+    },
+    {
+      "export": 2,
+      "name": "player_death"
+    },
+    {
+      "export": 2,
+      "name": "ReinitGlobals"
+    },
+    {
+      "export": 2,
+      "name": "ResetLevel"
+    }
+  ]
+}

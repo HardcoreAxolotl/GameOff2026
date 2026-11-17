@@ -1,7 +1,7 @@
 /*shader_set(shColorChange);
 
 var color_to_set = shader_get_uniform(shColorChange, "u_Color");
-var color = COLORS[color_id_cache];
+var color = COLORS[current_color];
 
 shader_set_uniform_f(
     color_to_set,

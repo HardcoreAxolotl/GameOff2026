@@ -1,1 +1,1 @@
-player_death()
+player_death();

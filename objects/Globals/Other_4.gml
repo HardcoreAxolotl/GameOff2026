@@ -11,4 +11,7 @@ if (global.IHateTheCoolBG) {
     layer_set_fx("BG", _fx);
 }
 
-ReinitGlobals();
+if (global.NewLevel) {
+    ReinitGlobals();
+    global.NewLevel = false;
+}

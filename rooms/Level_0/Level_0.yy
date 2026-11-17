@@ -6,7 +6,6 @@
   "inheritCreationOrder":true,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_7B0A80D4","path":"rooms/Level_0/Level_0.yy",},
     {"name":"inst_51A00078","path":"rooms/Level_0/Level_0.yy",},
     {"name":"inst_1C94F046","path":"rooms/Level_0/Level_0.yy",},
     {"name":"inst_463A6899","path":"rooms/Level_0/Level_0.yy",},
@@ -16,13 +15,14 @@
     {"name":"inst_6B7BE9FA","path":"rooms/Level_0/Level_0.yy",},
     {"name":"inst_EC5D11E","path":"rooms/Level_0/Level_0.yy",},
     {"name":"inst_67C91347","path":"rooms/Level_0/Level_0.yy",},
+    {"name":"inst_BB7FD20","path":"rooms/Level_0/Level_0.yy",},
+    {"name":"inst_344CA49B","path":"rooms/Level_0/Level_0.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Player","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_7B0A80D4","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7B0A80D4","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"propertyId":{"name":"starting_ability","path":"objects/oPlayer/oPlayer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":72.0,"y":88.0,},
+        {"$GMRInstance":"v4","%Name":"inst_BB7FD20","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_BB7FD20","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":72.0,"y":152.0,},
+        {"$GMRInstance":"v4","%Name":"inst_344CA49B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_344CA49B","objectId":{"name":"Start","path":"objects/Start/Start.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-16.0,"y":-16.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"BLACK","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"layers":[],"name":"BLACK","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":48,"SerialiseWidth":84,"TileCompressedData":[
           -14,0,-70,-2147483648,1,0,-12,-2147483648,1,0,-70,-2147483648,1,0,-12,-2147483648,1,0,-70,-2147483648,

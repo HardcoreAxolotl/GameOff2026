@@ -1,4 +1,5 @@
 function ReinitGlobals() {
+    show_debug_message("ReinitGlobals script was executed - room: " + room_get_name(room));
     global.Layer = [
         layer_get_id("WHITE"),
         layer_get_id("RED"),

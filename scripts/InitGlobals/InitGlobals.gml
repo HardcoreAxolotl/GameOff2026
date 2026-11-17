@@ -1,4 +1,5 @@
 function InitGlobals() {
+    show_debug_message("InitGlobals script was executed - room: " + room_get_name(room));
     global.Layer = [
         layer_get_id("WHITE"),
         layer_get_id("RED"),
@@ -56,6 +57,7 @@ function InitGlobals() {
     global.GameStarted = false;
     global.GamePaused = false;
     global.GameSettings = false;
+    global.NewLevel = false;
     
     // UI
     global.ButtonSelection = 0;

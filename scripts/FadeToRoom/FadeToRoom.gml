@@ -5,6 +5,7 @@
 /// @arg {reset} reset Reset Room (for playable levels)
 /// @arg {above_gui} above_gui Ignore GUI stop fade
 function fade_to_room(_room, _dur, _color, _reset = false, _above_gui = false) {
+    show_debug_message("FadeToRoom script was executed - room: " + room_get_name(room));
     var _inst = instance_create_depth(0, 0, 0, Fade);
 
     with (_inst) {

@@ -1,4 +1,5 @@
 function ExplodePlayer(_sprite, _x, _y){
+    show_debug_message("ExplodePlayer script was executed - room: " + room_get_name(room));
     ww = sprite_get_width(_sprite); //we need to know how wide
     hh = sprite_get_height(_sprite); //and how tall our sprite is
     
