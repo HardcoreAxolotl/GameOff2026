@@ -1,0 +1,1 @@
+global.SFX = !global.SFX;

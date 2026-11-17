@@ -6,6 +6,6 @@ if (global.GameStarted) {
     }
     else {
         layer_set_visible("PauseMenu", false);
-        layer_set_visible("Settings", false);
+        layer_set_visible("SettingsMenu", false);
     }
 }

@@ -51,7 +51,6 @@ function InitGlobals() {
     global.TransitionForHaters = false;
     global.IHateTheCoolBG = false;
     global.SFX = true;
-    global.Music = true;
 
     // Game state
     global.GameStarted = false;
