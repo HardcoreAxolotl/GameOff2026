@@ -144,7 +144,6 @@
     {"id":{"name":"ParentCheckbox","path":"objects/ParentCheckbox/ParentCheckbox.yy",},},
     {"id":{"name":"SeenInColor","path":"objects/SeenInColor/SeenInColor.yy",},},
     {"id":{"name":"SeenOutColor","path":"objects/SeenOutColor/SeenOutColor.yy",},},
-    {"id":{"name":"Start","path":"objects/Start/Start.yy",},},
     {"id":{"name":"GameBase","path":"rooms/GameBase/GameBase.yy",},},
     {"id":{"name":"Initalize","path":"rooms/Initalize/Initalize.yy",},},
     {"id":{"name":"Level_0","path":"rooms/Level_0/Level_0.yy",},},

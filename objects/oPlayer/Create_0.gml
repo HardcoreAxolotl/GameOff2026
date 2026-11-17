@@ -54,6 +54,11 @@ else {
     instance_create_layer(x,y,layer,CheckPoint);
 }
 
+if (!instance_exists(Existed)) {
+    global.NewLevel = true;
+    instance_create_layer(x,y,layer,Existed);
+}
+
 /*
 alarm 0 is cayote time
 alarm 1 is jump buffering
