@@ -2,11 +2,6 @@ if (global.CurrentColor != ColorID) {
     var Layer = global.Layer;
     
     if (ColorID< 0 || ColorID >= array_length(COLORS)) return;
-        
-    with (CheckPoint) {
-        x = self.x;
-        y = self.y;
-    }
 
     var lay_id = layer_get_id("BG");
     var back_id = layer_background_get_id(lay_id);
@@ -45,7 +40,7 @@ if (global.CurrentColor != ColorID) {
     instance_create_layer(
         x, y,
         layer,
-        oFade,
+        oFadeOrb,
         {
             creator: id
         }

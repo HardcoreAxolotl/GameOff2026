@@ -1,20 +1,30 @@
 #region constants
 grav = 0.2;
+wall_grav = 0.05;
 max_jumps = 1;
 jump_force = 3.33333;
+
+hwall_jump_force = 5;
+vwall_jump_force = 3.666666;
+wall_jump_lock_duration = 8;
 
 acceleration = 0.5;
 decceleration = 0.6;
 max_speed = 2;
+max_fall = 10;
+max_slide = 5;
 
 air_control = 0.6; 
 
-enum ABILITIES {
+dash_speed = 8;
+dash_duration = 10;
+dash_cooldown_time = 18;
+
+enum ABILITIES { // You can have only 1 ability active at a time so no need to think about ability compatability with other abilities
     NONE = 0,
     DOUBLE_JUMP = 1,
-    WALL_JUMP = 2,
-    GRAVITY_SWAP = 3,
-    DASH = 4
+    GRAVITY_SWAP = 2,
+    DASH = 3
 }
 
 #endregion
@@ -26,6 +36,7 @@ vspd = 0;
 move_dir = 0;
 wall_dir = 0;
 jumps = 0;
+wall_jump_lock_timer = 0;
 
 // states
 is_dead = false;
@@ -38,6 +49,11 @@ is_gravity_swapped = false;
 can_dash = false;
 can_swap_gravity = false;
 
+// timers
+dash_timer = 0;
+dash_cooldown = 0;
+dash_dir = 1;
+
 // collision
 collision = noone;
 
@@ -49,9 +65,15 @@ active_ability = starting_ability;
 if (instance_exists(CheckPoint)) {
     x = CheckPoint.x;
     y = CheckPoint.y;
+    active_ability = CheckPoint.active_ability;
+    is_gravity_swapped = CheckPoint.is_gravity_swapped; 
+    image_xscale = CheckPoint.image_xscale;
+    image_yscale = CheckPoint.image_yscale;
 }
 else {
-    instance_create_layer(x,y,layer,CheckPoint);
+    var inst = instance_create_layer(x,y,layer,CheckPoint);
+    inst.active_ability = active_ability;
+    inst.is_gravity_swapped = is_gravity_swapped;
 }
 
 if (!instance_exists(Existed)) {

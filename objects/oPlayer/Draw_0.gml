@@ -10,5 +10,5 @@ shader_set_uniform_f(
     color_get_blue(color) / 255.0
 );*/
 draw_self();
-draw_text(x, y-32, is_walled)
+draw_text(x, y-32, vspd)
 //shader_reset();

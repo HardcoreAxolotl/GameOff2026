@@ -16,10 +16,7 @@
     "name":"Buttons",
     "path":"folders/Objects/UI/Buttons.yy",
   },
-  "parentObjectId":{
-    "name":"ChangeColor",
-    "path":"objects/ChangeColor/ChangeColor.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -1,11 +1,2 @@
-if (global.GameStarted) {
-    global.GamePaused = !global.GamePaused;
-    if (global.GamePaused) {
-        global.CurrentUI = 2;
-        layer_set_visible("PauseMenu", true);
-    }
-    else {
-        layer_set_visible("PauseMenu", false);
-        layer_set_visible("SettingsMenu", false);
-    }
-}
+// Pause is now handled in the Step event through INPUT_VERB.SYSTEM so the
+// keyboard Escape key and the gamepad Start button share one code path.

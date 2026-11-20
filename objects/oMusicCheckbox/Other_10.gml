@@ -1,6 +1,10 @@
+// Inherit the parent event
+event_inherited();
+
+// enabled = music on (stop when false)
 if (enabled) {
-    audio_stop_sound(snTemporary);
+    if (!audio_is_playing(snShiftOfTheme)) audio_play_sound(snShiftOfTheme, 1, true);
 }
 else {
-    audio_play_sound(snTemporary, 1, true);
+    audio_stop_sound(snShiftOfTheme);
 }

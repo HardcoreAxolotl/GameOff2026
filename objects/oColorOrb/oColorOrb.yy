@@ -9,12 +9,12 @@
   "name":"oColorOrb",
   "overriddenProperties":[],
   "parent":{
-    "name":"Orgs",
-    "path":"folders/Objects/Level/Orgs.yy",
+    "name":"Orbs",
+    "path":"folders/Objects/Level/Orbs.yy",
   },
   "parentObjectId":{
-    "name":"SeenOutColor",
-    "path":"objects/SeenOutColor/SeenOutColor.yy",
+    "name":"OrbEffect",
+    "path":"objects/OrbEffect/OrbEffect.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,7 +30,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"ColorID","filters":[],"listItems":[],"multiselect":false,"name":"ColorID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varDescription":"WHITE: 0\r\nRED: 1\r\nYELLOW: 2\r\nGREEN: 3\r\nCYAN: 4\r\nBLUE: 5\r\nPURPLE: 6\r\nBLACK: 7","varFriendlyName":"Color ID","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"ColorID","filters":[],"listItems":[],"multiselect":false,"name":"ColorID","rangeEnabled":false,"rangeMax":7.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varDescription":"WHITE = 0\r\nRED = 1\r\nYELLOW = 2\r\nGREEN = 3\r\nCYAN = 4\r\nBLUE = 5\r\nPURPLE = 6\r\nBLACK = 7","varFriendlyName":"Color ID","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

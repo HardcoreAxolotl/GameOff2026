@@ -16,7 +16,7 @@ if (move_dir != 0) {
         image_xscale = move_dir;
 }
 
-if (alarm[2] > 0) {
+if (dash_timer > 0) {
     sprite_index = sPlayerDash;
 }
 else if (is_grounded) {
@@ -27,7 +27,7 @@ else if (is_grounded) {
     }
     else { sprite_index = sPlayerIdle; }
 }
-else if (wall_dir != 0) {
+else if (is_walled) {
     image_xscale = wall_dir;
     sprite_index = sPlayerWallSlide;
 }

@@ -9,9 +9,9 @@ PURPLE: 6
 BLACK: 7
 */
 
-#macro COLORS [c_white, c_red, c_yellow, c_lime, c_aqua, c_blue, make_color_rgb(128,  0, 255), make_color_rgb(8, 8, 8)]
+#macro COLORS [c_white, c_red, c_yellow, c_lime, c_aqua, c_blue, make_color_rgb(128,  0, 255), make_color_rgb(16, 16, 16)]
 
-audio_play_sound(snTemporary, 1, true);
+//audio_play_sound(snShiftOfTheme, 1, true);
 
 InitGlobals();
 

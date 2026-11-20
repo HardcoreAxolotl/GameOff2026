@@ -10,8 +10,8 @@
     "path":"folders/Objects/Level/Traps.yy",
   },
   "parentObjectId":{
-    "name":"SeenInColor",
-    "path":"objects/SeenInColor/SeenInColor.yy",
+    "name":"TrapBase",
+    "path":"objects/TrapBase/TrapBase.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -26,7 +26,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"ColorID","filters":[],"listItems":[],"multiselect":false,"name":"ColorID","rangeEnabled":true,"rangeMax":7.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

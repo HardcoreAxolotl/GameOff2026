@@ -27,6 +27,7 @@ if (!global.GamePaused) {
             if (place_meeting(x + _dir, y, collision)) {
                 hspd = 0;
                 dash_timer = 0;     // stop the dash when we hit a wall
+                is_dashing = false;
                 break;
             }
     

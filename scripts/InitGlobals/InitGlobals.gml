@@ -64,6 +64,7 @@ function InitGlobals() {
     global.ButtonSelection = 0;
     global.ButtonCount = 3;
     global.CurrentUI = 0;
+    global.LastUIMenu = "";
     
     // Color
     global.CurrentColor = 0;

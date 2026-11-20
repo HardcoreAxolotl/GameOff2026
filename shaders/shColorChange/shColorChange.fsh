@@ -7,7 +7,7 @@ void main()
 {
     vec4 tex = texture2D(gm_BaseTexture, v_vTexcoord);
 
-    if (!(tex.r == tex.g && tex.g == tex.b))
+    if (tex.r == tex.g && tex.g == tex.b)
     {
         tex.rgb *= u_Color;
     }
