@@ -12,7 +12,7 @@ acceleration = 0.5;
 decceleration = 0.6;
 max_speed = 2;
 max_fall = 10;
-max_slide = 5;
+max_slide = 2.5;
 
 air_control = 0.6; 
 
@@ -43,6 +43,7 @@ is_dead = false;
 is_grounded = false;
 is_dashing = false;
 is_walled = false;
+is_unwallable = false;
 is_gravity_swapped = false;
 
 // conditionals

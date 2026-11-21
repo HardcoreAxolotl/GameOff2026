@@ -1,0 +1,47 @@
+{
+  "$GMObject":"",
+  "%Name":"oSawTrap",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
+  "managed":true,
+  "name":"oSawTrap",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"TrapBase","path":"objects/TrapBase/TrapBase.yy",},"propertyId":{"name":"ColorID","path":"objects/TrapBase/TrapBase.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
+  ],
+  "parent":{
+    "name":"Saw Trap",
+    "path":"folders/Objects/Level/Traps/Saw Trap.yy",
+  },
+  "parentObjectId":{
+    "name":"TrapBase",
+    "path":"objects/TrapBase/TrapBase.yy",
+  },
+  "persistent":false,
+  "physicsAngularDamping":0.1,
+  "physicsDensity":0.5,
+  "physicsFriction":0.2,
+  "physicsGroup":1,
+  "physicsKinematic":false,
+  "physicsLinearDamping":0.1,
+  "physicsObject":false,
+  "physicsRestitution":0.1,
+  "physicsSensor":false,
+  "physicsShape":1,
+  "physicsShapePoints":[],
+  "physicsStartAwake":true,
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"BackAndForth","filters":[],"listItems":[],"multiselect":false,"name":"BackAndForth","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"MoveSpeed","filters":[],"listItems":[],"multiselect":false,"name":"MoveSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1.0","varType":0,},
+  ],
+  "resourceType":"GMObject",
+  "resourceVersion":"2.0",
+  "solid":false,
+  "spriteId":{
+    "name":"sSawTrap",
+    "path":"sprites/sSawTrap/sSawTrap.yy",
+  },
+  "spriteMaskId":null,
+  "visible":true,
+}

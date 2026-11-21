@@ -1,0 +1,1 @@
+if (!is_dead) event_user(0);

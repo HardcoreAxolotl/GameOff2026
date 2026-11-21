@@ -1,6 +1,6 @@
 if (ColorID == -1) {
     other.active_ability = Ability;
-    
+
     instance_create_layer(
         x, y,
         layer,
@@ -9,17 +9,14 @@ if (ColorID == -1) {
             creator: id
         }
     );
-    
-    instance_destroy(self);
 }
 else if (global.CurrentColor != ColorID) {
-    var Layer = global.Layer;
-    
-    if (ColorID< 0 || ColorID >= array_length(COLORS)) return;
+
+    if (ColorID < 0 || ColorID >= array_length(COLORS)) return;
 
     var lay_id = layer_get_id("BG");
     var back_id = layer_background_get_id(lay_id);
-    
+
     if (global.TransitionForHaters) {
         instance_create_layer(
             x, y,
@@ -32,7 +29,7 @@ else if (global.CurrentColor != ColorID) {
                 current_layer: global.CurrentColor,
                 target_layer: ColorID
             }
-    );
+        );
     }
     else {
         instance_create_layer(
@@ -46,11 +43,11 @@ else if (global.CurrentColor != ColorID) {
                 current_layer: global.CurrentColor,
                 target_layer: ColorID
             }
-    );
+        );
     }
 
     global.CurrentColor = ColorID;
-    
+
     instance_create_layer(
         x, y,
         layer,
@@ -60,3 +57,5 @@ else if (global.CurrentColor != ColorID) {
         }
     );
 }
+
+instance_destroy();

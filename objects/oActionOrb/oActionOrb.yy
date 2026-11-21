@@ -38,9 +38,6 @@
     "name":"sOrb",
     "path":"sprites/sOrb/sOrb.yy",
   },
-  "spriteMaskId":{
-    "name":"sOrb",
-    "path":"sprites/sOrb/sOrb.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
